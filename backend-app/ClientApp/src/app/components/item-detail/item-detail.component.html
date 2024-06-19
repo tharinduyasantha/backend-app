@@ -1,0 +1,15 @@
+<h2>Item Details</h2>
+<div *ngIf="item">
+  <form>
+    <div>
+      <label for="itemId">Id:</label>
+      <input type="text" id="itemId" [(ngModel)]="item.id" name="id" disabled>
+    </div>
+    <div>
+      <label for="itemName">Name:</label>
+      <input type="text" id="itemName" [(ngModel)]="item.name" name="name">
+    </div>
+    <button routerLink="/items">Back to List</button>
+    <button type="button" (click)="updateItem()">Update</button>
+  </form>
+</div>
